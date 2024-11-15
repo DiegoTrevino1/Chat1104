@@ -1,0 +1,12 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Chat_1104" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimary">#86FFD83D</item>
+        <item name="android:statusBarColor">@color/primary</item>
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <!-- customize themes in here -->
+    </style>
+
+    <style name="Theme.Chat_1104" parent="Base.Theme.Chat_1104" />
+</resources>
