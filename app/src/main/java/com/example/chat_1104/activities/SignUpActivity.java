@@ -56,13 +56,9 @@ public class SignUpActivity extends AppCompatActivity {
         binding = ActivitySignUpBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         preferenceManager = new PreferenceManager(getApplicationContext());
-
         setListeners();
 
     }
-
-
-
 
     //create method for setListeners and be able to go back to sign in page
     private void setListeners() {
@@ -139,10 +135,9 @@ public class SignUpActivity extends AppCompatActivity {
 
         return Base64.encodeToString(bytes, Base64.DEFAULT);
 
-
-
 //        return null;
     }
+
 
     //create ActivityResult function
     private final ActivityResultLauncher<Intent> pickImage = registerForActivityResult(
@@ -165,7 +160,6 @@ public class SignUpActivity extends AppCompatActivity {
                 }
             }
     );
-
 
 
     //check if content boxes are filled with conditional statements
@@ -194,6 +188,7 @@ public class SignUpActivity extends AppCompatActivity {
             return true;
         }
     }
+
 
     //create loading function
     private void loading(Boolean isLoading){
