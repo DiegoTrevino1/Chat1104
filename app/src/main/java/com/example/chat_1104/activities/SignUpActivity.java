@@ -14,7 +14,6 @@ import android.util.Base64;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Toast;
-
 import androidx.activity.EdgeToEdge;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContract;

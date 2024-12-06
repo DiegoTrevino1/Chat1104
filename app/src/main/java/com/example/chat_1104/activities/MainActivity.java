@@ -26,6 +26,7 @@ import java.util.HashMap;
 //main method class for MainActivity that extends AppCompatActivity
 public class MainActivity extends AppCompatActivity {
 
+    //initialize binding, preferenceManager
     private ActivityMainBinding binding;
     private PreferenceManager preferenceManager;
 
@@ -43,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    // set listeners function
     private void setListeners(){
         binding.imagesSignOut.setOnClickListener(v -> signOut());
 
@@ -51,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
                 UserActivity.class)));
     }
 
+    // load user details function
     private void loadUserDetails(){
         binding.textName.setText(preferenceManager.getString(Constants.KEY_NAME));
         byte[] bytes = Base64.decode(preferenceManager.getString(Constants.KEY_IMAGE),Base64.DEFAULT);
@@ -58,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
         binding.imageProfile.setImageBitmap(bitmap);
     }
 
+    //show toast message
     private void showToast(String message){
         Toast.makeText(getApplicationContext(), message,Toast.LENGTH_SHORT).show();
     }
@@ -77,6 +81,8 @@ public class MainActivity extends AppCompatActivity {
                 .addOnFailureListener(e -> showToast("Unable to update Token"));
     }
 
+
+    // function to sign out of app
     private void signOut(){
         showToast("Signing out...");
         FirebaseFirestore database = FirebaseFirestore.getInstance();

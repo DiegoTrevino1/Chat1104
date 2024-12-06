@@ -22,11 +22,10 @@ import kotlinx.coroutines.channels.ReceiveChannel;
 // Extend RecyclerView to generate all information
 public class ChatAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
 
-    // Initialize receiverProfileImage
+    // Initialize receiverProfileImage, chatMessages, sendId, and counters
     private Bitmap receiverProfileImage;
     private final List<ChatMessage> chatMessages;
     private final String sendId;
-
     public static final int VIEW_TYPE_SENT = 1;
     public static final int VIEW_TYPE_RECEIVED = 2;
 
